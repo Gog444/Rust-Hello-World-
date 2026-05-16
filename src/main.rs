@@ -1,3 +1,7 @@
+use std::io;
 fn main(){
-    println!("Hello, World!");
+    let mut name = String::new();
+    println!("Enter your name: ");
+    io::stdin().read_line(&mut name).expect("input fail");
+    println!("Hello, {name}");
 }
